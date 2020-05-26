@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>TPS Website</title>
+        <link rel="shortcut icon" type="image/icon" href="img/Don_Bosco_logo_icon.ico">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Oswald:wght@500&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/cb293b41fe.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="styles.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+    </head>
+    
+    <body id="top">
+        <!-- ********************************* -->
+        <header>
+            <h2><a href="#top" target="_blank"><img class="img_top" src="img/Don_Bosco_logo.jpg" alt=""></a></h2>
+            <nav>
+                <ul>
+                    <li><a class="l1" href="#top">Cima</a></li>
+                    <li><a class="l2" href="#about">Chi siamo?</a></li>
+                    <li><a class="l3" href="index.html">Gli argomenti</a></li>
+                    <li><a class="l4" href="esercizi.html">Gli esercizi</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- ********************************* -->
+        <div id="hero">
+            <div class="background-image"></div>
+            <h1>Gestione File-System</h1>
+            <h3>Tu capirai come si organizza<br>cartelle nell computer</h3>
+        </div>
+        <!-- ********************************* -->
+        <div id="getting-around">
+            <h3 class="titleOfGetting">Chi Siamo?</h3>
+            <img class="img" id="img" src="img/Don_Bosco_logo.jpg">
+
+            <p class="ttbel">Siamo gli studenti dell'instituto tecnico industriale Don Bosco (Settore informatica).
+            </p>
+
+
+
+            <ul class="grid">
+                <li>
+                    <img class="img" src="img/bishoy-kamel.jpg">
+                    <h4>Bishoy Kamel</h4>
+                    <p class="left">Èta: 18 <br> C++ Developer <br> Web Developer <br> Android Developer</p>
+                   
+                </li>
+                <li>
+                    <img class="img" src="img/IMG_20200526_230411.jpg">
+                    <h4>Abanoub Wagih</h4>
+                    <p class="meddile">Èta: 18 <br> C++ Developer <br> Web Developer <br> Python Developer</p>
+                </li>
+                <li>
+                    <img class="img" src="img/400015800837_163833.jpg">
+                    <h4>Fady Samir</h4>
+                    <p class="right">Èta: 18 <br> C++ Developer <br> Web Developer <br> Android Developer<br></p>
+                </li>
+                <li>
+                    <img class="img" src="img/IMG-20200526-WA0200.jpg">
+                    <h4>Youssef Ashraf</h4>
+                    <p class="right">Èta: 18 <br> C++ Developer <br> Web Developer <br></p>
+                </li>
+                <li>
+                    <img class="img" src="img/IMG-20200526-WA0217.jpg">
+                    <h4>Raul Robery</h4>
+                    <p class="right">Èta: 18 <br> C++ Developer <br> Web Developer <br> Arduino Developer<br></p>
+                </li>
+            </ul>
+        </div>.
+        
+        
+        <footer id="social-media">
+            <ul>
+                <li><a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-youtube-square"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-pinterest-square"></i></a></li>
+            </ul>
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> It sure is fun create websites.</p>
+            <p>&ldquo;Istituto salesiano Don Bosco (2019/2020).</p>
+            <li><a class="float-botton" href="#top"><i class="fas fa-arrow-up"></i></i></a></li>
+           <dl>
+                <dt>Sopravisionato da:</dt>
+                <dd style="font-size: small; color: rgb(160, 159, 159);">prof: Mohamed Gawish</dd>
+            </dl>
+            <br>
+        </footer>   
+        <script type="text/javascript">
+	           $(document).ready(function(){
+		       $('a[href^="#"]').on('click',function (e) {e.preventDefault();
+
+		       var target = this.hash;
+		       var $target = $(target);
+
+		       $('html, body').stop().animate({
+	                'scrollTop': $target.offset().top-100
+		       }, 900, 'swing', function () {
+	               window.location.hash = target-100;
+		       });
+	       });
+        });
+        </script>
+    </body>
+    
+</html>

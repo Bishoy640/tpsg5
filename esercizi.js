@@ -1,4 +1,4 @@
-var answer = ["dati", "gerarchico", " maggiore", "piccoli ", "floppy", "globale", "technology", "format", "windows", "mac"];
+var answer = ["dati", "gerarchico", " maggiore", "piccoli ", "floppy", "globale", "technology", "format", "windows", "mac", "state", "hard", "latenza", "meno"];
 var correctCount = 0;
 var result;
 var button = document.getElementById("button");
