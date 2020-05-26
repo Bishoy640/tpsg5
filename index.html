@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>TPS Website</title>
+        <link rel="shortcut icon" type="image/icon" href="img/Don_Bosco_logo_icon.ico">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Oswald:wght@500&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/cb293b41fe.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="styles.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+        
+        <style>         
+            
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+                margin-top: 47px;
+            }
+            
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+            
+            .dropdown-content a:hover {background-color: #f1f1f1}
+            
+            li:hover .dropdown-content {
+                display: block;
+            }
+            
+            @media(max-width: 1000px){
+                .dropdown-content{
+                    min-width: 20px;
+                    margin-top: 20px;
+                }
+            }
+            
+        </style>
+        
+    </head>
+    
+    <body id="top">
+        <!-- ********************************* -->
+        <header>
+            <h2><a href="#" target="_blank"><img class="img_top" src="img/Don_Bosco_logo.jpg" alt=""></a></h2>
+            <nav>
+                <ul>
+                    <li><a class="l2" href="#about">Chi siamo?</a>
+                            <div class="dropdown-content">
+                                <a href="#">Link 1-------------------------------------------------</a>
+                                <a href="#">Link 2-------------------------------------------------</a>
+                                <a href="#">Link 3-------------------------------------------------</a>
+                                <a href="#">Link 4-------------------------------------------------</a>
+                                <a href="#">Link 5-------------------------------------------------</a>
+                                <a href="#">Link 6-------------------------------------------------</a>
+                                <a href="#">Link 7-------------------------------------------------</a> 
+                            </div>
+                    </li>
+                    <li><a class="l3" href="index.html">Gli argomenti</a>
+                        <div class="dropdown-content">
+                                <a href="#about">1) Che cos'è un file system?</a>
+                                <a href="#directory">2) Directory</a>
+                                <a href="#blocchi">3) Blocchi di un file system:</a>
+                                <a href="#come">4) Come funzionano i file system?</a>
+                                <a href="#tipi">5) Tipi di file system</a>
+                                <a href="#">Link 6-------------------------------------------------</a>
+                                <a href="#">Link 7-------------------------------------------------</a> 
+                        </div>
+                    </li>
+                    <li><a class="l4" href="esercizi.html">Gli esercizi</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- ********************************* -->
+        <div id="hero">
+            <div class="background-image"></div>
+            <h1>Gestione File-System</h1>
+            <h3>Tu capirai come si organizza<br>le cartelle nell computer</h3>
+        </div>
+        <!-- ********************************* -->
+        <br>
+        <br>
+
+        <div id="about">
+            <h3 class="title">1) Che cos'è un file system?</h3>
+            <div id="two-cols">
+                <div class="about-bio">
+                    <p><br>
+                        Un file system è un processo che gestisce come e dove archiviare, accedere e gestire i dati su un disco di archiviazione, in genere un disco rigido (HDD). È un componente logico del disco che gestisce le operazioni interne di un disco in relazione a un computer ed è astratto per un utente umano
+                    </p>
+                </div>
+                <p>&nbsp;</p>
+            </div>
+            <hr>
+            
+        </div>
+
+        <div id="directory">
+            <img class="directoryPic" src="img/dir.jpg" alt="">
+
+            <h3 class="title">2) Directory</h3>
+            <div id="two-cols">
+                <div class="about-bio">
+                    <p><br>
+                        Una directory è una posizione per l'archiviazione dei file sul tuo computer. Le directory si   trovano in un file system gerarchico, come Linux, MS-DOS, OS / 2 e Unix
+                        <br>
+                        <br>
+                        Nella foto è un esempio di output dal comando dell'albero di Windows / DOS. Mostra tutte le directory locali e le sottodirectory (ad esempio, la directory "big" nella directory cdn). Quando si osserva questa panoramica, la directory corrente è la directory principale dell'unità C :. Si chiama directory "root" perché non c'è nulla al di sotto di essa e le altre directory "si ramificano" al di fuori di essa. Se si utilizza un sistema operativo con più account utente, la directory può anche essere definita home directory..
+                        <br>
+                        <br>
+                        <br>
+                        
+                    </p>
+                </div>
+                <p>&nbsp;</p>
+            </div>
+            <hr>
+            
+        </div>
+
+
+        <br>
+
+
+        <div id="blocchi">
+
+            <h3 class="title">3) Blocchi di un file system:</h3>
+            <img class="blocchiPic" src="img/blocchi.png" alt="">
+
+            <div id="two-cols">
+                
+                <div class="about-bio">
+                    <p><br>
+                        Un file deve essere composto da un numero intero di settori (la testina legge almeno un settore).<br> <br>
+                        
+                        I settori di un file non possono essere contigui (tutti sulla stessa traccia e su tracce dello stesso cilindro) o far crescere un file sarebbe molto complicato. Quindi, se un file ha bisogno di spazio, il file system gli dà un blocco di n settori contigui, ma non garantisce che i vari blocchi del file siano contigui. Ogni blocco ha un indirizzo (p.es. 0,1,2,...) che il S.O. sa tradurre nell’indirizzo del settore iniziale sul disco. Quanto dovrebbe valere n?<br> <br>
+                        • Blocchi grossi danno maggiore velocità: leggere 200 settori è più veloce se sono tutti nello stesso blocco, quindi contigui. Inoltre, sono richiesti meno bit per indirizzare blocchi grossi<br> <br> 
+                        • Blocchi piccoli sprecano meno spazio (frammentazione interna) <br> <br>
+                        • La scelta comune su UNIX è avere blocchi di 0.5, 1 o 2 K, cioè, con settori di 0.5 K, blocchi di 1, 2 o 4 settori. → 16 bit=2B indirizzano 64K blocchi (64M se blocco = 2 settori)
+
+                        <br>
+                        <br>
+                        
+                    </p>
+                </div>
+                <p>&nbsp;</p>
+            </div>
+            <hr>
+            
+        </div>
+
+        <div id="come">
+
+            <h3 class="title">4) Come funzionano i file system:</h3>
+            <img class="comePic" src="img/come.jpg" alt="">
+
+            <div id="two-cols">
+                
+                <div class="about-bio">
+                    <p><br>
+                        Un file system archivia e organizza i dati e può essere considerato come un tipo di indice per tutti i dati contenuti in un dispositivo di archiviazione. Questi dispositivi possono includere dischi rigidi, unità ottiche e unità flash.
+                        <br>
+                        <br>
+
+                        I file system specificano le convenzioni per la denominazione dei file, incluso il numero massimo di caratteri in un nome, quali caratteri possono essere usati e, in alcuni sistemi, quanto tempo può essere il suffisso del nome file. In molti file system, i nomi dei file non fanno distinzione tra maiuscole e minuscole.
+                        <br>
+                        <br>
+
+                        Insieme al file stesso, i file system contengono informazioni quali la dimensione del file, nonché i relativi attributi, posizione e gerarchia nella directory nei metadati. I metadati possono anche identificare blocchi liberi di memoria disponibile sull'unità e quanto spazio è disponibile.
+
+                        <br>
+                        <br>
+
+                        Un file system include anche un formato per specificare il percorso di un file attraverso la struttura delle directory. Un file viene inserito in una directory - o in una cartella nel sistema operativo Windows - o nella sottodirectory nel punto desiderato nella struttura ad albero. I PC e i sistemi operativi mobili dispongono di file system in cui i file sono collocati da qualche parte in una struttura ad albero gerarchica.
+                        <br>
+                        <br>
+                        Prima di creare file e directory sul supporto di archiviazione, è necessario creare le partizioni. Una partizione è una regione del disco rigido o altra memoria gestita separatamente dal sistema operativo. Un file system è contenuto nella partizione primaria e alcuni sistemi operativi consentono più partizioni su un disco. In questa situazione, se un file system viene danneggiato, i dati in una diversa partizione 
+                        <br>
+                        <br>
+                    </p>
+                </div>
+                <p>&nbsp;</p>
+            </div>
+            <hr>
+            
+        </div>
+
+
+
+        <div id="tipi">
+
+            <h3 class="title">5) Tipi di file system </h3>
+            <img class="tipiPic" src="img/tipi.png" alt="">
+
+            <div id="two-cols">
+                
+                <div class="about-bio">
+                    <p><br>
+                        velocità e dimensioni. Il tipo di file system può variare in base al sistema operativo e alle esigenze di tale sistema operativo. I tre sistemi operativi per PC più comuni sono Microsoft Windows, Mac OS X e Linux. I sistemi operativi mobili includono Apple iOS e Google Android.
+                        <br><br>
+                        <strong> principali file system includono:</strong>
+                        <br><br>
+                        La tabella di allocazione dei file (FAT) è supportata dal sistema operativo Microsoft Windows. Il FAT è considerato semplice e affidabile ed è modellato su file system legacy. FAT è stato progettato nel 1977 per i floppy disk, ma è stato successivamente adattato per i dischi rigidi. Sebbene efficiente e compatibile con la maggior parte dei sistemi operativi attuali, FAT non può eguagliare le prestazioni e la scalabilità dei file system più moderni.
+                        <br><br>
+                        Il file system globale (GFS) è un file system per il sistema operativo Linux ed è un file system del disco condiviso. GFS offre accesso diretto all'archiviazione a blocchi condivisi e può essere utilizzato come file system locale.
+                        GFS2 è una versione aggiornata con funzionalità non incluse nel GFS originale, come un sistema di metadati aggiornato. Secondo i termini della GNU General Public License, entrambi i file system GFS e GFS2 sono disponibili come software libero.
+                        <br><br>
+                        Il file system gerarchico (HFS) è stato sviluppato per l'uso con i sistemi operativi Mac. HFS può anche essere indicato come Mac OS Standard ed è stato sostituito da Mac OS Extended. Originariamente introdotto nel 1985 per floppy e hard disk, HFS ha sostituito il file system Macintosh originale. Può essere utilizzato anche su CD-ROM.
+                        <br><br>
+                        Il file system NT - noto anche come New Technology File System (NTFS) - è il file system predefinito per i prodotti Windows dal sistema operativo Windows NT 3.1 in poi. I miglioramenti rispetto al precedente file system FAT includono un migliore supporto dei metadati, prestazioni e utilizzo dello spazio su disco. NTFS è inoltre supportato nel sistema operativo Linux tramite un driver NTFS gratuito e open source. I sistemi operativi Mac hanno il supporto di sola lettura per NTFS.
+                        <br><br>
+                        Universal Disk Format (UDF) è un file system indipendente dal fornitore utilizzato su supporti ottici e DVD. UDF sostituisce il file system ISO 9660 ed è il file system ufficiale per i video e l'audio DVD, come scelto dal Forum DVD.
+
+
+                        <br>
+                        <br>
+                        
+                    </p>
+                </div>
+                <p>&nbsp;</p>
+            </div>
+            <hr>
+            
+        </div>
+
+
+        <!-- ********************************* -->
+        
+<!--
+        <div id="gallery" class="photo-gallery">
+            <h3 class="title">Gallery</h3>
+            <p>Released under the CC0 license, Pexels helps people to get access to beautiful photos that they can use freely in projects like websites, blogs, products or book covers. Some of the best free stock photos are at Pexels.
+            </p>
+            <hr>
+            <ul class="grid">
+                <li class="small" style="background-image: url('img/alaska-wilderness-sky-aurora-borealis.jpg')"></li>
+                <li class="large" style="background-image: url('img/glacier.jpg')"></li>
+                <li class="small" style="background-image: url('img/alaska-glacier-ice-mountains.jpg')"></li>
+                <li class="large" style="background-image: url('img/clouds.jpg')"></li>
+                <li class="small" style="background-image: url('img/img2/ai.jpg')"></li>
+                <li class="large" style="background-image: url('img/img2/ai1.jpg')"></li>
+                <li class="small" style="background-image: url('img/img2/photo-1427504494785-3a9ca7044f45.jpeg')"></li>
+                <li class="large" style="background-image: url('img/img2/photo-1460518451285-97b6aa326961.jpeg')"></li>
+                <li class="small" style="background-image: url('img/img2/photo-1477281765962-ef34e8bb0967.jpeg')"></li>
+                <li class="large" style="background-image: url('img/img2/photo-1494809610410-160faaed4de0.jpeg')"></li>
+                <li class="small" style="background-image: url('img/img2/photo-1501290836517-b22a21c522a4.jpeg')"></li>
+                <li class="large" style="background-image: url('img/img2/photo-1509062522246-3755977927d7.jpeg')"></li>
+                <li class="small" style="background-image: url('img/img2/p1.jpeg')"></li>
+                <li class="large" style="background-image: url('img/glacier.jpg')"></li>
+                <li class="small" style="background-image: url('img/img2/photo-1503676382389-4809596d5290.jpeg')"></li>
+                <li class="large" style="background-image: url('img/clouds.jpg')"></li>
+                <li class="small" style="background-image: url('img/img2/photo-1498243691581-b145c3f54a5a.jpeg')"></li>
+                <li class="large" style="background-image: url('img/img2/photo-1503676382389-4809596d5290.jpeg')"></li>
+                <li class="small" style="background-image: url('img/alaska-glacier-ice-mountains.jpg')"></li>
+                <li class="large" style="background-image: url('img/img2/photo-1506377872008-6645d9d29ef7.jpeg')"></li>
+                <li class="small" style="background-image: url('img/alaska-wilderness-sky-aurora-borealis.jpg')"></li>
+                <li class="large" style="background-image: url('img/img2/photo-1523240795612-9a054b0db644.jpeg')"></li>
+                <li class="small" style="background-image: url('img/img2/photo-1516110833967-0b5716ca1387.jpeg')"></li>
+                <li class="large" style="background-image: url('img/img2/photo-1551281306-0d52288970ad.jpeg')"></li>
+                
+            </ul>
+        </div>
+-->
+        
+        
+        <!-- ********************************* -->
+        
+        <div id="getting-around">
+            <hr>
+            <h3 class="title">way of traveling</h3>
+            <p>Here are three ways you can use to travel around Alaska represented by font awesome icons. There are many more ways of traveling, but here are three that fit nicely in this section and have icons that you can manipulate like fonts in CSS.
+            </p>
+            <ul class="grid">
+                <li>
+                    <i class="fas fa-plane ico"></i>
+                    <h4>Airplane</h4>
+                    <p class="left">A powered flying vehicle with fixed wings and a weight greater than that of the air it displaces.</p>
+                </li>
+                <li>
+                    <i class="fas fa-ship ico"></i>
+                    <h4>Cruise</h4>
+                    <p class="meddile">A passenger ship used for pleasure voyages, where the voyage itself and the ship's amenities are a part of the experience.</p>
+                </li>
+                <li>
+                    <i class="fas fa-taxi ico"></i>
+                    <h4>Taxis</h4>
+                    <p class="right">A motor vehicle licensed to transport passengers in return for payment of a fare.</p>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        
+        <!-- ********************************* -->
+        
+        <div id="famous-quotes">
+            <h3 class="title">whatt other our saying</h3>
+            <p class="portrait"><img src="img/dickens.jpg" alt="Charles Dickens" class="photos"></p>
+            <p class="quote">&ldquo;No one is useless in this world who lightens the burden of it to anyone else.&rdquo;</p>
+            <p class="author">&mdash; Charles Dickens</p>
+            <p class="portrait"><img src="img/franklin.jpg" alt="Benjamin Franklin" class="photos"></p>
+            <p class="quote">&ldquo;An investment in knowledge pays the best interest.&rdquo;</p>
+            <p class="author">&mdash; Benjamin Franklin</p>
+            <p class="portrait"><img src="img/leonardo.jpg" alt="Leonardo da Vinci" class="photos"></p>
+            <p class="quote">&ldquo;Learning never exhausts the mind.&rdquo;</p>
+            <p class="author">&mdash; Leonardo da Vinci</p>
+            <hr>
+        </div>
+        
+        <!-- ********************************* -->
+        <div id="contact">
+            <h3 class="title">my studio location</h3>
+            <section class="flexbox-section">
+                <p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13811.136872416942!2d31.2406208741752!3d30.0717191294977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458406385434489%3A0x8f5991a6319a75cd!2sShubra%2C%20Cairo%20Governorate!5e0!3m2!1sen!2seg!4v1588677879586!5m2!1sen!2seg" width="400" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </p>
+                <p>Egypt<br>Cairo<br>Shobra</p>
+            </section>
+            
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdYZTvpQ27kX6POvvXoeZ1y0uenWnOnGwxjRPaYTFe9R2kAbQ/viewform?embedded=true" width="100%" height="1250" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
+        <!-- ********************************* -->
+        
+        <!--**************************************************************************************************************-->
+<!--
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img class="img1" src="img/ai.jpg" style="width:100%">
+                <div class="text">Caption Text</div>
+            </div>
+            
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img class="img1" src="img/ai1.jpg" style="width:100%">
+                <div class="text">Caption Two</div>
+            </div>
+            
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img class="img1" src="IMG/alaska-wilderness-sky-aurora-borealis.jpg" style="width:100%">
+                <div class="text">Caption Three</div>
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+-->
+        <p>&nbsp;</p>
+         <!--**************************************************************************************************************-->
+        <footer id="social-media">
+            <ul>
+                <li><a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-youtube-square"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-pinterest-square"></i></a></li>
+            </ul>
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> It sure is fun create websites.</p>
+            <p>&ldquo;Tell me and I orget, teach me and I may remember, involve me and I learn.&rdquo; &mdash;Benjamin Franklin</p>
+        </footer>
+        <script type="text/javascript">
+	           $(document).ready(function(){
+		       $('a[href^="#"]').on('click',function (e) {e.preventDefault();
+
+		       var target = this.hash;
+		       var $target = $(target);
+
+		       $('html, body').stop().animate({
+	                'scrollTop': $target.offset().top-100
+		       }, 900, 'swing', function () {
+	               window.location.hash = target-100;
+		       });
+	       });
+        });
+        </script>
+<!--
+        <script>
+            var slideIndex = 0;
+            showSlides();
+            
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1}    
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+                setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+        </script>
+-->
+    </body>
+</html>

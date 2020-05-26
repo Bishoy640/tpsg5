@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Esercizi</title>
+        <link rel="shortcut icon" type="image/icon" href="img/Don_Bosco_logo_icon.ico">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Oswald:wght@500&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/cb293b41fe.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="styles.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+        
+
+        
+        <style>         
+            
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+                margin-top: 47px;
+            }
+            
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+            
+            .dropdown-content a:hover {background-color: #f1f1f1}
+            
+            li:hover .dropdown-content {
+                display: block;
+            }
+            
+            @media(max-width: 1000px){
+                .dropdown-content{
+                    min-width: 20px;
+                    margin-top: 20px;
+                }
+            }
+            
+        </style>
+
+    </head>
+
+    <body>
+
+
+        
+        <!-- ********************************* -->
+        <header>
+            <h2><a href="#" target="_blank"><img class="img_top" src="img/Don_Bosco_logo.jpg" alt=""></a></h2>
+            <nav>
+                <ul>
+                    <li><a class="l1" href="#top">Top</a></li>
+                    <li><a class="l2" href="#about">Chi siamo?</a>
+                            <div class="dropdown-content">
+                                <a href="#">Link 1-------------------------------------------------</a>
+                                <a href="#">Link 2-------------------------------------------------</a>
+                                <a href="#">Link 3-------------------------------------------------</a>
+                                <a href="#">Link 4-------------------------------------------------</a>
+                                <a href="#">Link 5-------------------------------------------------</a>
+                                <a href="#">Link 6-------------------------------------------------</a>
+                                <a href="#">Link 7-------------------------------------------------</a> 
+                            </div>
+                    </li>
+                    <li><a class="l3" href="index.html">Gli argomenti</a>
+                        <div class="dropdown-content">
+                                <a href="index.html">1) Che cos'è un file system?</a>
+                                <a href="#directory">2) Directory</a>
+                                <a href="#blocchi">3) Blocchi di un file system:</a>
+                                <a href="#come">4) Come funzionano i file system?</a>
+                                <a href="#tipi">5) Tipi di file system</a>
+                                <a href="#">Link 6-------------------------------------------------</a>
+                                <a href="#">Link 7-------------------------------------------------</a> 
+                        </div>
+                    </li>
+                    <li><a class="l4" href="#gallery">Gli esercizi</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- ********************************* -->
+
+
+
+        <div id="hero">
+            <div class="background-image"></div>
+            <h1>Gestione File-System</h1>
+            <h3>Tu capirai come si organizza<br>le cartelle nell computer</h3>
+        </div>
+
+        <br><br>
+
+        <h1 class="title" >Gli Esercizi</h1>
+
+        
+        <br><br>
+        <h3>1) Un file system è un processo che gestisce come e dove archiviare, accedere e gestire i <input type="text" name="r1" style="width: 110px; height: 25px; font-size: 20px; text-align: center;" id="r100"> su un disco. </h3>
+        <br>
+        <h3>2) Le directory si trovano in un file system in modo  <input type="text" name="r2" style="width: 110px; height: 25px; font-size: 20px; text-align: center;" id="r100"> . </h3>
+
+        <br>
+        <h3>3) Blocchi grossi danno <input type="text" name="r3" style="width: 110px; height: 25px; font-size: 20px; text-align: center;" id="r100"> velocità. </h3><br>
+        
+        <h3>4) Blocchi <input type="text" name="r4" style="width: 110px; height: 25px; font-size: 20px; text-align: center;" id="r100"> sprecano meno spazio. </h3><br>
+       
+        <h3>5) FAT è stato progettato nel 1977 per i <input type="text" name="r5" style="width: 110px; height: 25px; font-size: 20px; text-align: center;" id="r100"> disk. </h3>
+
+        <br>
+
+        <h3>6) GFS vuol dire file system <input type="text" name="r6" style="width: 110px; height: 25px; font-size: 20px; text-align: center;" id="r100"> . </h3>
+
+        <br>
+
+        <h3>7) NTFS vuol dire new <input type="text" name="r7" style="width: 110px; height: 25px; font-size: 20px; text-align: center;" id="r100"> file system. </h3>
+
+        <br>
+
+        <h3>8) UDF vuol dire universal disk <input type="text" name="r8" style="width: 110px; height: 25px; font-size: 20px; text-align: center;" id="r100"> . </h3>
+
+        <br>
+
+        <h3>9) NTFS è predifinito per il sistema operativo <input type="text" name="r9" style="width: 110px; height: 25px; font-size: 20px; text-align: center;" id="r100"> . </h3>
+
+        <br>
+
+        <h3>10) HFS è predifinito per il sistema operativo <input type="text" name="r10" style="width: 110px; height: 25px; font-size: 20px; text-align: center;" id="r100"> . </h3>
+
+        <br>
+
+        <button onclick="input(); this.disabled = true;" type="button" class="btn btn-default" id="button"><strong>Controlla</strong></button>
+        
+        <br>
+        <br>
+        <script src="esercizi.js"></script>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+
+    </body>
+</html>
