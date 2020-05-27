@@ -413,6 +413,7 @@ GETTING AROUND
     animation-delay: 1s;
     animation-name: fadebounce;
     text-align: left;
+    padding-left: 20px;
     animation-duration: 1s;
     animation-fill-mode: forwards;
     font-family: 'Roboto', sans-serif;
