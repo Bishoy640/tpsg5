@@ -642,7 +642,7 @@ ARGOMENTI
     animation-duration: 1s;
     animation-fill-mode: forwards;
     width: 500px;
-    height: 500px;
+    height: 450px;
     margin-right: 70px;
     margin-left: 20px;
     float: right;
@@ -706,7 +706,7 @@ ARGOMENTI
     animation-duration: 1s;
     animation-fill-mode: forwards;
     width: 420px;
-    height: 320px; 
+    height: 270px; 
     margin: 100px auto;
     margin-right: 125px;
     margin-left: 60px;
@@ -772,8 +772,8 @@ ARGOMENTI
     animation-name: fadebounce;
     animation-duration: 1s;
     animation-fill-mode: forwards;
-    width: 412px;
-    height: 201px; 
+    width: 400px;
+    height: 200px; 
     margin: 250px auto;
     margin-right: 110px;
     margin-left: 60px;
