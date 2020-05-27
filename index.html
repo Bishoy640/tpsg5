@@ -102,7 +102,7 @@
                         <p><br>
                             Un file deve essere composto da un numero intero di settori (la testina legge almeno un settore).<br> <br>
                             
-                            I settori di un file non possono essere contigui (tutti sulla stessa traccia e su tracce dello stesso cilindro) o far crescere un file sarebbe molto complicato. Quindi, se un file ha bisogno di spazio, il file system gli dà un blocco di n settori contigui, ma non garantisce che i vari blocchi del file siano contigui. Ogni blocco ha un indirizzo (p.es. 0,1,2,...) che il S.O. sa tradurre nell’indirizzo del settore iniziale sul disco. Quanto dovrebbe valere n?<br> <br>
+                            I settori di un file non possono essere contigui (tutti sulla stessa traccia e su tracce dello stesso cilindro) o far crescere un file sarebbe molto complicato. Quindi, se un file ha bisogno di spazio, il file system gli dà un blocco di n settori contigui, ma non garantisce che i vari blocchi del file siano contigui. Ogni blocco ha un indirizzo (p.es. 0,1,2,...) che il S.O. sa tradurre nell’indirizzo del settore iniziale sul disco.<br> <br>
                             • Blocchi grossi danno maggiore velocità: leggere 200 settori è più veloce se sono tutti nello stesso blocco, quindi contigui. Inoltre, sono richiesti meno bit per indirizzare blocchi grossi<br> <br> 
                             • Blocchi piccoli sprecano meno spazio (frammentazione interna) <br> <br>
                             • La scelta comune su UNIX è avere blocchi di 0.5, 1 o 2 K, cioè, con settori di 0.5 K, blocchi di 1, 2 o 4 settori. → 16 bit=2B indirizzano 64K blocchi (64M se blocco = 2 settori)
