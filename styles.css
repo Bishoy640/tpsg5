@@ -64,6 +64,35 @@ animation
     }
 }
 
+@keyframes fadebounce-reverse{
+    0%{
+        opacity: 0;
+        transform: translateY(0%);
+    }
+    
+    40%{
+        transform: translateY(-200);
+    }
+    
+    55%{
+        transform: translateY(-10px);
+    }
+    
+    70%{
+        opacity: 1;
+        transform: translateY(0)
+    }
+    
+    85%{
+        transform: translateY(3px)
+    }
+    
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
 /*-----------------------
 FOOTER
 ________________________*/
@@ -369,15 +398,15 @@ h3.title{
 
 
 /*-------------------------------
-GETTING AROUND
+chi_siamo
 ---------------------------------*/
 
-#getting-around{
+#chi_siamo{
     text-align:center !important;
     max-width: 800px;
     margin: 50px auto;
 }
-#getting-around h3{
+#chi_siamo h3{
     opacity: 0;
     font-size: 35px;
     animation-name: fadebounce;
@@ -399,7 +428,7 @@ GETTING AROUND
     margin: 30px auto;
 }
 
-#getting-around ul.grid{
+#chi_siamo ul.grid{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -408,7 +437,7 @@ GETTING AROUND
     margin-bottom: 60px;
 }
 
-#getting-around p{
+#chi_siamo p{
     opacity: 0;
     animation-delay: 1s;
     animation-name: fadebounce;
@@ -421,14 +450,14 @@ GETTING AROUND
     
 }
 
-#getting-around ul.grid li{
+#chi_siamo ul.grid li{
     flex-basis: 20%;
     margin: 0 30px;
     margin-bottom: 40px;
     /*justify-content: center;*/
 }
 
-#getting-around ul.grid li h4{
+#chi_siamo ul.grid li h4{
     opacity: 0;
     animation-delay: 2s;
     animation-name: fadebounce;
@@ -439,17 +468,17 @@ GETTING AROUND
     margin-bottom: 10px;
 }
 
-#getting-around ul.grid li p{
+#chi_siamo ul.grid li p{
     text-align: left justify;
     margin: 0;  
 }
 
 @media(max-width: 1000px){
-    #getting-around{
+    #chi_siamo{
         padding: 0 40px;
     }
     
-    #getting-around ul.grid li{
+    #chi_siamo ul.grid li{
         flex-basis: 70%;
         margin-bottom: 65px;
     }
