@@ -17,9 +17,7 @@ for(var i = 0; i< answer.length; i++){
 }
 
 function input() {
-
     button.disabled=true;
-
 
   for (var i = 0; i < answer.length; i++) {
     var textBox = document.getElementsByName("r" + (i + 1))[0];
